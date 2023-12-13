@@ -1,0 +1,167 @@
+:root{
+  --colourTextStrong: #e9e1d8;
+  --colourTextWeak: #b8afc4;
+  --colourHighlight: #c8ba9b;
+  --colourBGSecondary: #504a57;
+  --colourBG: #423c3c;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--colourBG);
+  color: var(--colourTextWeak);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--colourTextStrong);
+  margin: 0;
+  padding: 0;
+}
+
+.eyecatcher{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 2rem;
+}
+
+.photoOfPerson{
+  background-image: url("assets/David-head-of-sculpture-by-Michelangelo-Buonarroti.jpg");
+  aspect-ratio: 1/1;
+  min-width: 400px;
+  min-height: 400px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-shadow: var(--colourBGSecondary) 0px 0px 5px;
+}
+
+.descriptionBox{
+  background-color: var(--colourBGSecondary);
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+.iconSection{
+  display: flex;
+  justify-content: end;
+}
+
+.portfolioSection{
+  padding: 2rem;
+}
+
+.card{
+  min-width: 320px;
+  box-shadow: 1px 2px 3px var(--colourTextWeak);
+}
+
+.screenshotProject{
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardbody{
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.cardNameIconBar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.projectGrid{
+  margin-top: 2rem;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.footer{
+  background-color: var(--colourBGSecondary);
+  display: flex;
+  padding: 2rem;
+}
+
+.footertextbox{
+  flex: 2;
+}
+
+.contact{
+  display: flex;
+  gap: 2rem;
+}
+
+.iconFooter{
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.footerpic{
+  background-image: url("assets/3Ph.gif");
+  aspect-ratio: 3/2;
+  flex: 3;
+  background-position: center;
+  background-size: cover;
+}
+
+.diagonal{
+  width: 1300px;
+  min-height: 500px;
+  background-color: var(--colourHighlight);
+  transform: rotate(-20deg) translate(-500px,-500px);
+  z-index: -1;
+  position: absolute
+}
+
+@media (max-width: 800px){
+  .eyecatcher{
+    flex-direction:column;
+    margin: 0;
+  }
+
+  .diagonal{
+    display: none;
+  }
+
+  .photoOfPerson{
+    min-width: 100%;
+    min-height: 0;
+  }
+
+  .card{
+    min-width: 100%;
+  }
+
+  .portfolioSection{
+    padding: 0;
+    padding-top: 2rem;
+  }
+
+  .footer{
+    flex-direction: column;
+  }
+
+  .portfolioSection h2{
+    margin-left: 2rem;
+  }
+
+  .footerpic{
+    margin-top: 2rem;
+  }
+}
